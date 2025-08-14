@@ -161,8 +161,8 @@ export default {
       this.editing = true;
     },
     async deleteItem(id) {
-      await api.delete(`/itens/${id}`);
-      this.fetchItens();
+        await api.delete(`/itens/${id}`);
+        await this.fetchItens();
     },
     cancel() {
       this.showForm = false;

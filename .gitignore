@@ -8,6 +8,7 @@ __pycache__/
 
 # LocalDatabase
 data-base/pgdata/
+data-base/pgdatalocal/
 
 # Distribution / packaging
 .Python

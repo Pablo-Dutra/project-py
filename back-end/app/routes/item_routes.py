@@ -58,9 +58,10 @@ async def deletar_item(item_id: int):
     database = get_database()
     try:
         query = items.delete().where(items.c.id == item_id)
-        result = await database.execute(query)
-        if not result:
+        item = await database.fetch_one(items.select().where(items.c.id == item_id))
+        if not item:
             raise HTTPException(status_code=404, detail="Item não encontrado")
+        await database.execute(query)
         return {"ok": True}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
