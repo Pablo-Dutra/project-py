@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# LocalDatabase
+data-base/pgdata/
+
 # Distribution / packaging
 .Python
 build/

@@ -1,2 +1,2 @@
-# project-py
-Aplicação backend Python e frontend Vue JS
+docker-compose -f docker-compose-local.yml up --build
+
